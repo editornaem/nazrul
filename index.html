@@ -3,48 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ফটো অ্যালবাম</title>
+    <title>Engr Masud Rana | ফটো অ্যালবাম</title>
     <style>
+        :root {
+            --primary-color: #0d1117;
+            --secondary-color: #161b22;
+            --accent-color: #58a6ff;
+            --text-color: #c9d1d9;
+            --card-bg: #21262d;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+        }
+        header {
+            background-color: var(--secondary-color);
+            padding: 30px 20px 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: var(--accent-color);
+        }
+        header h2 {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #8b949e;
         }
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-	     h2 {
-            text-align: center;
-            color: #333;
+            margin: 30px auto;
+            padding: 0 20px;
         }
         .album-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 20px;
         }
         .album {
-            background: #fff;
-            border-radius: 8px;
+            background: var(--card-bg);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .album:hover {
+            transform: scale(1.03);
         }
         .album img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-bottom: 1px solid #30363d;
         }
         .album h3 {
             margin: 10px;
             font-size: 18px;
             text-align: center;
+            color: var(--accent-color);
         }
         .modal {
             display: none;
@@ -53,34 +74,46 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(13, 17, 23, 0.95);
             justify-content: center;
             align-items: center;
+            z-index: 9999;
         }
         .modal img {
             max-width: 90%;
             max-height: 90%;
-            border-radius: 8px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
         }
         .modal-close {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 25px;
+            right: 30px;
             color: #fff;
-            font-size: 30px;
+            font-size: 40px;
+            font-weight: bold;
             cursor: pointer;
         }
         @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+            header h2 {
+                font-size: 16px;
+            }
             .album-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Nazrul Islam Tuhin</h1>
+        <h2>ফটো অ্যালবাম</h2>
+    </header>
+
     <div class="container">
-       <h1>Engr Masud Rana</h1>
-		<h2>ফটো অ্যালবাম</h2>
         <div class="album-grid" id="albumGrid">
             <!-- অ্যালবাম ডাইনামিক্যালি যোগ হবে -->
         </div>
@@ -280,7 +313,175 @@ const albums = [
   { image: "Nazrul (185).png" },
   { image: "Nazrul (186).png" },
   { image: "Nazrul (187).png" },
-  { image: "Nazrul (188).png" }
+  { image: "Nazrul (188).png" },
+  { image: "Nazrul2 (1).png" },
+  { image: "Nazrul2 (2).png" },
+  { image: "Nazrul2 (3).png" },
+  { image: "Nazrul2 (4).png" },
+  { image: "Nazrul2 (5).png" },
+  { image: "Nazrul2 (6).png" },
+  { image: "Nazrul2 (7).png" },
+  { image: "Nazrul2 (8).png" },
+  { image: "Nazrul2 (9).png" },
+  { image: "Nazrul2 (10).png" },
+  { image: "Nazrul2 (11).png" },
+  { image: "Nazrul2 (12).png" },
+  { image: "Nazrul2 (13).png" },
+  { image: "Nazrul2 (14).png" },
+  { image: "Nazrul2 (15).png" },
+  { image: "Nazrul2 (16).png" },
+  { image: "Nazrul2 (17).png" },
+  { image: "Nazrul2 (18).png" },
+  { image: "Nazrul2 (19).png" },
+  { image: "Nazrul2 (20).png" },
+  { image: "Nazrul2 (21).png" },
+  { image: "Nazrul2 (22).png" },
+  { image: "Nazrul2 (23).png" },
+  { image: "Nazrul2 (24).png" },
+  { image: "Nazrul2 (25).png" },
+  { image: "Nazrul2 (26).png" },
+  { image: "Nazrul2 (27).png" },
+  { image: "Nazrul2 (28).png" },
+  { image: "Nazrul2 (29).png" },
+  { image: "Nazrul2 (30).png" },
+  { image: "Nazrul2 (31).png" },
+  { image: "Nazrul2 (32).png" },
+  { image: "Nazrul2 (33).png" },
+  { image: "Nazrul2 (34).png" },
+  { image: "Nazrul2 (35).png" },
+  { image: "Nazrul2 (36).png" },
+  { image: "Nazrul2 (37).png" },
+  { image: "Nazrul2 (38).png" },
+  { image: "Nazrul2 (39).png" },
+  { image: "Nazrul2 (40).png" },
+  { image: "Nazrul2 (41).png" },
+  { image: "Nazrul2 (42).png" },
+  { image: "Nazrul2 (43).png" },
+  { image: "Nazrul2 (44).png" },
+  { image: "Nazrul2 (45).png" },
+  { image: "Nazrul2 (46).png" },
+  { image: "Nazrul2 (47).png" },
+  { image: "Nazrul2 (48).png" },
+  { image: "Nazrul2 (49).png" },
+  { image: "Nazrul2 (50).png" },
+  { image: "Nazrul2 (51).png" },
+  { image: "Nazrul2 (52).png" },
+  { image: "Nazrul2 (53).png" },
+  { image: "Nazrul2 (54).png" },
+  { image: "Nazrul2 (55).png" },
+  { image: "Nazrul2 (56).png" },
+  { image: "Nazrul2 (57).png" },
+  { image: "Nazrul2 (58).png" },
+  { image: "Nazrul2 (59).png" },
+  { image: "Nazrul2 (60).png" },
+  { image: "Nazrul2 (61).png" },
+  { image: "Nazrul2 (62).png" },
+  { image: "Nazrul2 (63).png" },
+  { image: "Nazrul2 (64).png" },
+  { image: "Nazrul2 (65).png" },
+  { image: "Nazrul2 (66).png" },
+  { image: "Nazrul2 (67).png" },
+  { image: "Nazrul2 (68).png" },
+  { image: "Nazrul2 (69).png" },
+  { image: "Nazrul2 (70).png" },
+  { image: "Nazrul2 (71).png" },
+  { image: "Nazrul2 (72).png" },
+  { image: "Nazrul2 (73).png" },
+  { image: "Nazrul2 (74).png" },
+  { image: "Nazrul2 (75).png" },
+  { image: "Nazrul2 (76).png" },
+  { image: "Nazrul2 (77).png" },
+  { image: "Nazrul2 (78).png" },
+  { image: "Nazrul2 (79).png" },
+  { image: "Nazrul2 (80).png" },
+  { image: "Nazrul2 (81).png" },
+  { image: "Nazrul2 (82).png" },
+  { image: "Nazrul2 (83).png" },
+  { image: "Nazrul2 (84).png" },
+  { image: "Nazrul2 (85).png" },
+  { image: "Nazrul2 (86).png" },
+  { image: "Nazrul2 (87).png" },
+  { image: "Nazrul2 (88).png" },
+  { image: "Nazrul2 (89).png" },
+  { image: "Nazrul2 (90).png" },
+  { image: "Nazrul2 (91).png" },
+  { image: "Nazrul2 (92).png" },
+  { image: "Nazrul2 (93).png" },
+  { image: "Nazrul2 (94).png" },
+  { image: "Nazrul2 (95).png" },
+  { image: "Nazrul2 (96).png" },
+  { image: "Nazrul2 (97).png" },
+  { image: "Nazrul2 (98).png" },
+  { image: "Nazrul2 (99).png" },
+  { image: "Nazrul2 (100).png" },
+  { image: "Nazrul2 (101).png" },
+  { image: "Nazrul2 (102).png" },
+  { image: "Nazrul2 (103).png" },
+  { image: "Nazrul2 (104).png" },
+  { image: "Nazrul2 (105).png" },
+  { image: "Nazrul2 (106).png" },
+  { image: "Nazrul2 (107).png" },
+  { image: "Nazrul2 (108).png" },
+  { image: "Nazrul2 (109).png" },
+  { image: "Nazrul2 (110).png" },
+  { image: "Nazrul2 (111).png" },
+  { image: "Nazrul2 (112).png" },
+  { image: "Nazrul2 (113).png" },
+  { image: "Nazrul2 (114).png" },
+  { image: "Nazrul2 (115).png" },
+  { image: "Nazrul2 (116).png" },
+  { image: "Nazrul2 (117).png" },
+  { image: "Nazrul2 (118).png" },
+  { image: "Nazrul2 (119).png" },
+  { image: "Nazrul2 (120).png" },
+  { image: "Nazrul2 (121).png" },
+  { image: "Nazrul2 (122).png" },
+  { image: "Nazrul2 (123).png" },
+  { image: "Nazrul2 (124).png" },
+  { image: "Nazrul2 (125).png" },
+  { image: "Nazrul2 (126).png" },
+  { image: "Nazrul2 (127).png" },
+  { image: "Nazrul2 (128).png" },
+  { image: "Nazrul2 (129).png" },
+  { image: "Nazrul2 (130).png" },
+  { image: "Nazrul2 (131).png" },
+  { image: "Nazrul2 (132).png" },
+  { image: "Nazrul2 (133).png" },
+  { image: "Nazrul2 (134).png" },
+  { image: "Nazrul2 (135).png" },
+  { image: "Nazrul2 (136).png" },
+  { image: "Nazrul2 (137).png" },
+  { image: "Nazrul2 (138).png" },
+  { image: "Nazrul2 (139).png" },
+  { image: "Nazrul2 (140).png" },
+  { image: "Nazrul2 (141).png" },
+  { image: "Nazrul2 (142).png" },
+  { image: "Nazrul2 (143).png" },
+  { image: "Nazrul2 (144).png" },
+  { image: "Nazrul2 (145).png" },
+  { image: "Nazrul2 (146).png" },
+  { image: "Nazrul2 (147).png" },
+  { image: "Nazrul2 (148).png" },
+  { image: "Nazrul2 (149).png" },
+  { image: "Nazrul2 (150).png" },
+  { image: "Nazrul2 (151).png" },
+  { image: "Nazrul2 (152).png" },
+  { image: "Nazrul2 (153).png" },
+  { image: "Nazrul2 (154).png" },
+  { image: "Nazrul2 (155).png" },
+  { image: "Nazrul2 (156).png" },
+  { image: "Nazrul2 (157).png" },
+  { image: "Nazrul2 (158).png" },
+  { image: "Nazrul2 (159).png" },
+  { image: "Nazrul2 (160).png" },
+  { image: "Nazrul2 (161).png" },
+  { image: "Nazrul2 (162).png" },
+  { image: "Nazrul2 (163).png" },
+  { image: "Nazrul2 (164).png" },
+  { image: "Nazrul2 (165).png" },
+  { image: "Nazrul2 (166).png" },
+  { image: "Nazrul2 (167).png" },
+  { image: "Nazrul2 (168).png" }
 ];
         // অ্যালবাম গ্রিডে যোগ করা
         const albumGrid = document.getElementById("albumGrid");
